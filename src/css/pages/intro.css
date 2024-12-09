@@ -1,0 +1,292 @@
+@charset "UTF-8";
+section#intro {
+  background: var(--mainBg-color);
+  border-bottom: 1px solid var(--black600);
+  position: relative;
+}
+section#intro .home__down {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 50%; /* 도형 형태를 유지하려면 필요 */
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5), 1px 1px 5px rgba(0, 0, 0, 0.1); /* 안쪽 블러 효과 */
+  position: absolute;
+  left: 50%;
+  bottom: 9%;
+  transform: translateX(-50%);
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+section#intro .blend {
+  pointer-events: none;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 120%;
+  mix-blend-mode: color-burn;
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 900;
+}
+section#intro .blend img {
+  width: 100%;
+  height: 100%;
+}
+section#intro .sect_inner {
+  height: 86%;
+  background-color: var(--black100);
+  text-align: center;
+}
+section#intro .sect_inner .stickers {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 64%;
+  z-index: 10;
+}
+section#intro .sect_inner .stickers .sticker {
+  position: absolute;
+  left: 50%;
+  transition: 0.1;
+  opacity: 1;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.05s;
+}
+section#intro .sect_inner .stickers .sticker.black1, section#intro .sect_inner .stickers .sticker.black2, section#intro .sect_inner .stickers .sticker.black3, section#intro .sect_inner .stickers .sticker.blue1, section#intro .sect_inner .stickers .sticker.blue2, section#intro .sect_inner .stickers .sticker.blue3 {
+  border-radius: 50%;
+}
+section#intro .sect_inner .stickers .sticker.black1 .img_blend, section#intro .sect_inner .stickers .sticker.black2 .img_blend, section#intro .sect_inner .stickers .sticker.black3 .img_blend, section#intro .sect_inner .stickers .sticker.blue1 .img_blend, section#intro .sect_inner .stickers .sticker.blue2 .img_blend, section#intro .sect_inner .stickers .sticker.blue3 .img_blend {
+  position: absolute;
+  left: 0;
+  top: 0;
+  mix-blend-mode: color-burn;
+}
+section#intro .sect_inner .stickers .sticker.black1 {
+  z-index: 10;
+  background: var(--main-color);
+}
+section#intro .sect_inner .stickers .sticker.black2 {
+  background: var(--main-color);
+}
+section#intro .sect_inner .stickers .sticker.black3 {
+  transform: rotate(45deg);
+  background: var(--main-color);
+}
+section#intro .sect_inner .stickers .sticker.blue1 {
+  background: #ddd;
+}
+section#intro .sect_inner .stickers .sticker.blue2 {
+  background: #ddd;
+}
+section#intro .sect_inner .stickers .sticker.blue3 {
+  background: #ddd;
+}
+section#intro .sect_inner .stickers .sticker.long1, section#intro .sect_inner .stickers .sticker.long2, section#intro .sect_inner .stickers .sticker.long3, section#intro .sect_inner .stickers .sticker.blue4 {
+  background: var(--main-color);
+}
+section#intro .sect_inner .stickers .sticker.long1 {
+  z-index: 1;
+}
+section#intro .sect_inner .stickers .sticker.long2 {
+  z-index: 1;
+}
+section#intro .sect_inner .stickers .sticker.long3 {
+  z-index: 1;
+}
+
+@media only screen and (max-width: 600px) {
+  main section {
+    width: 1400px;
+    margin: auto;
+    width: 100%;
+  }
+  main section#intro {
+    height: 100vh;
+  }
+  main section#intro .blend {
+    pointer-events: none;
+    background-image: url(../../../img/sticker_texture_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120%;
+    mix-blend-mode: color-burn;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 900;
+  }
+  main section#intro .blend img {
+    width: 100%;
+    height: 100%;
+  }
+  main section#intro .stickers {
+    position: relative; /* stickers는 부모로서 relative */
+    z-index: 10;
+  }
+  main section#intro .stickers .sticker {
+    width: 150px;
+  }
+  main section#intro .stickers .sticker img {
+    width: 100%;
+  }
+  main section#intro .stickers .sticker.black1 {
+    transform: translate(-58%, 180%) rotate(-65deg);
+  }
+  main section#intro .stickers .sticker.black2 {
+    transform: translate(-4%, 23%) rotate(35deg);
+  }
+  main section#intro .stickers .sticker.blue1 {
+    transform: translate(72%, 138%) rotate(15deg);
+  }
+  main section#intro .stickers .sticker.blue2 {
+    transform: translate(-130%, 140%) rotate(-25deg);
+  }
+  main section#intro .stickers .sticker.blue3 {
+    z-index: 10;
+    transform: translate(27%, 246%) rotate(220deg);
+  }
+  main section#intro .stickers .sticker.long1, main section#intro .stickers .sticker.long2, main section#intro .stickers .sticker.long3 {
+    background: var(--main-color);
+    border-radius: 15px;
+  }
+  main section#intro .stickers .sticker.long1 {
+    width: 16rem;
+    transform: translate(-118%, 346%) rotate(35deg);
+  }
+  main section#intro .stickers .sticker.long2 {
+    width: 16rem;
+    transform: translate(-43%, 187%) rotate(-20deg);
+  }
+  main section#intro .stickers .sticker.long3 {
+    width: 16rem;
+    transform: translate(31%, 309%) rotate(130deg);
+  }
+  main section#intro .intro_title {
+    transform: translateY(80px);
+    color: var(--mainBg-color);
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+  }
+  main section#intro .intro_title p.publisher {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  main section#intro .intro_title p.portfolio {
+    color: var(--black600);
+  }
+}
+@media only screen and (min-width: 601px) {
+  main section {
+    width: 1400px;
+    margin: auto;
+    width: 100%;
+  }
+  main section#intro {
+    height: 100vh;
+  }
+  main section#intro .blend {
+    background-image: url(/src/img/sticker_texture_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 120% 150%;
+    mix-blend-mode: color-burn;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+    pointer-events: none;
+  }
+  main section#intro .intro_title {
+    transform: translateY(80px);
+    color: var(--main-color);
+    mix-blend-mode: difference;
+    text-transform: uppercase;
+  }
+  main section#intro .intro_title p.publisher {
+    font-size: 100px;
+    line-height: 1;
+  }
+  main section#intro .sticker {
+    width: 250px;
+  }
+  main section#intro .sticker img {
+    width: 100%;
+  }
+  main section#intro .sticker.black1 {
+    transform: translate(-86%, 70%) rotate(-65deg);
+  }
+  main section#intro .sticker.black2 {
+    transform: translate(-4%, 23%) rotate(35deg);
+  }
+  main section#intro .sticker.blue1 {
+    transform: translate(88%, 58%) rotate(15deg);
+  }
+  main section#intro .sticker.blue2 {
+    transform: translate(-160%, 32%) rotate(-35deg);
+  }
+  main section#intro .sticker.blue3 {
+    transform: translate(25%, 92%) rotate(195deg);
+  }
+  main section#intro .sticker.long1, main section#intro .sticker.long2, main section#intro .sticker.long3, main section#intro .sticker.long4 {
+    background: var(--main-color);
+    border-radius: 22px;
+  }
+  main section#intro .sticker.long1 {
+    width: 22rem;
+    transform: translate(-153%, 216%) rotate(27deg);
+  }
+  main section#intro .sticker.long2 {
+    width: 22rem;
+    transform: translate(-53%, 38%) rotate(-20deg);
+  }
+  main section#intro .sticker.long3 {
+    width: 22rem;
+    transform: translate(83%, 263%) rotate(-210deg);
+  }
+  main section#intro .sticker.long4 {
+    width: 22rem;
+    transform: translate(-67%, 235%) rotate(110deg);
+  }
+}
+@media only screen and (min-width: 900px) {
+  main section {
+    width: 1400px;
+    margin: auto;
+    width: 100%;
+  }
+  main section#intro {
+    height: 100vh;
+  }
+  main section#intro .intro_title p {
+    text-align: center;
+    font-weight: 700;
+  }
+  main section#intro .intro_title p.publisher {
+    text-transform: uppercase;
+  }
+  main section#intro .intro_title .publisher-stroke {
+    width: 500px;
+  }
+  main section#intro .intro_title .publisher-stroke.text {
+    stroke: red;
+    stroke-width: 2;
+  }
+  main section#intro .sticker {
+    width: 250px;
+  }
+  main section#intro .sticker img {
+    width: 100%;
+  }
+}/*# sourceMappingURL=intro.css.map */
